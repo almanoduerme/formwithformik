@@ -13,12 +13,10 @@ const Login = () => {
   const validate = Yup.object({
     email: Yup.string()
       .email(<p className="FormError">Invalid email address</p>)
-      .required(<p className="FormError">Required</p>)
-      .matches(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/, <p className="FormError">Invalid email address</p>),
+      .required(<p className="FormError">Required</p>),
     password: Yup.string()
       .min(8, <p className="FormError">Must be 8 characters or more</p>)
-      .required(<p className="FormError">Required</p>)
-      .matches(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/, <p className="FormError">Invalid email address</p>),
+      .required(<p className="FormError">Required</p>),
   });
 
   return (
